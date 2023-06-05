@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Bookshelf</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <a href="#" class="logo">
+            <img src="image/logo.png" alt="">
+        </a>
+      </div>
+      <div class="navbar-right">
+        <input type="checkbox" id="toggle-menu" class="toggle-input" />
+        <label for="toggle-menu" class="toggle-label">
+          <i class="bx bx-menu"></i>
+        </label>
+        <ul class="navbar-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#bookshelf">Bookshelf</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header id="home">
+        <div class="content">
+            <h1>My Bookshelf</h1>
+            <p>Explore. Discover. Immerse Yourself in the World of Books.</p>
+            <a class="mulai" href="#bookshelf">Mulai</a>
+        </div>
+    </header>
+      
+    <div class="wrapper">
+
+      <div class="form-container" >
+        <h2 id="bookshelf" class="title">Tambah Buku Baru</h2>
+        <form id="formDataBuku" action="" method="post">
+          <div class="form-group">
+            <input type="text" name="judul" id="judul" placeholder="" />
+            <label for="judul">Judul</label>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <input type="text" name="penulis" id="penulis" placeholder="" />
+              <label for="penulis">Penulis</label>
+            </div>
+            <div class="form-group">
+              <input type="number" name="tahun" id="tahun" placeholder="" />
+              <label for="tahun">Tahun</label>
+            </div>
+          </div>
+		  <div class="form-group">
+			  <textarea name="deskripsi" id="deskripsi" rows="4"></textarea>
+              <label for="deskripsi">Deskripsi</label>
+            </div>
+          <div class="form-check">
+            <input type="checkbox" name="isRead" id="isRead" placeholder="" />
+            <label for="isRead">Sudah selesai dibaca</label>
+          </div>
+          <button type="submit" class="submit-btn">Simpan</button>
+        </form>
+      </div>
+
+      <div class="cari-container">
+        <h2 class="title">Cari Buku</h2>
+        <form id="formSearch" action="" method="post">
+          <div class="form-group">
+            <input type="text" name="pencarian" id="pencarian" placeholder="" />
+            <label for="pencarian">Cari Buku</label>
+          </div>
+          <div class="form-search-bottom">
+            <button type="reset" class="reset-btn">
+              <i class="bx bx-reset"></i>
+            </button>
+            <button type="submit" class="cari-btn">
+              <i class="bx bx-search-alt-2"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="bottom">
+        <div class="left-container">
+          <h2 class="title">Buku Belum Dibaca</h2>
+          <div id="belumDibaca"></div>
+        </div>
+        <div class="right-container">
+          <h2 class="title">Buku Sudah Dibaca</h2>
+          <div id="sudahDibaca"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="kontak">
+    <div class="carousel">
+      <div class="carousel-item active">
+        <table style="width: 100%; padding: 15px 0px;">
+          <tr>
+            <td>Faizal Amri</td>
+          </tr>
+		  <tr>
+            <td>H1D020022</td>
+          </tr>
+		  <tr>
+            <td>faizal.a@mhs.unsoed.ac.id</td>
+          </tr>
+        </table>
+      </div>
+      <div class="carousel-item">
+        <table style="width: 100%; padding: 15px 0px;">
+          <tr>
+            <td>Safa Muazam</td>
+          </tr>
+		  <tr>
+            <td>H1D020048</td>
+          </tr>
+		  <tr>
+            <td>safa.muazam@mhs.unsoed.ac.id</td>
+          </tr>
+        </table>
+      </div>
+      <div class="carousel-item">
+        <table style="width: 100%; padding: 15px 0px;">
+          <tr>
+            <td>Fardan Maula Azizi</td>
+          </tr>
+		  <tr>
+            <td>H1D020053</td>
+          </tr>
+		  <tr>
+            <td>fardan.azizi@mhs.unsoed.ac.id</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="carousel-button">
+      <button onclick="prevSlide()"><i class="bx bx-chevron-left"></i></button>
+	  <img src="image/logo.png" style="display: inline-block;height: 50px;margin-top: 15px;">
+      <button onclick="nextSlide()"><i class="bx bx-chevron-right"></i></button>
+    </div>
+	<br>
+	<hr>
+	<br>
+	<p>Copyright F2S &copy 2023</p>
+  </footer>
+	
+	<button onclick="scrollToTop()" class="floating-btn">
+		<i class="bx bx-chevron-up"></i>
+	</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
